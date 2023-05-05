@@ -1,0 +1,42 @@
+@import "../../styles.scss";
+
+.mission_text {
+  margin-bottom: $s-spacing;
+  font-size: $xs-font;
+  background-color: $secondary-color;
+  color: $primary-color-invert;
+  padding: $xs-spacing;
+}
+
+.mission_video {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  margin-bottom: $s-spacing;
+}
+.mission_video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#dailyVisitors {
+  border: $secondary-color solid 0.3rem;
+  background-color: $primary-color-invert;
+}
+
+table {
+  border: $secondary-color solid 0.3rem;
+  background-color: $primary-color-invert;
+  font-weight: bold;
+  color: $secondary-color;
+}
+
+/* tablet breakpoint */
+@media (min-width: $tablet) {
+  .mission_text {
+    margin-right: $s-spacing;
+  }
+}

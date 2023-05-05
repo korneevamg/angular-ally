@@ -1,0 +1,82 @@
+@import "../styles.scss";
+
+/* Style the header */
+header {
+  padding: $xs-spacing;
+  vertical-align: middle;
+
+  background-image: url(./../assets/background-header.svg); //https://app.heazy.studio
+
+  nav {
+    grid-column: 1;
+    align-self: center;
+
+    .crumbs ol {
+      list-style-type: none;
+    }
+
+    .crumb {
+      display: inline-block;
+      padding: $xxs-spacing $xs-spacing;
+    }
+
+    .crumb a {
+      font-size: $xs-font;
+      font-weight: bold;
+      color: $primary-color;
+      text-decoration: none;
+    }
+  }
+
+  //   https://angular.io/api/router/RouterLinkActive
+  .active-link {
+    text-decoration: underline;
+  }
+}
+
+.logo {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-column: 2;
+}
+
+header .logo img {
+  grid-column: 1;
+  max-width: $m-spacing;
+  min-width: $s-spacing;
+  align-self: center;
+  justify-self: end;
+  text-align: right;
+  padding-right: $xs-spacing;
+}
+header .logo h1 {
+  grid-column: 2;
+  align-self: center;
+  justify-self: end;
+  text-align: right;
+}
+
+.secondary-color {
+  color: $secondary-color;
+}
+
+main {
+  flex: 1 0 auto;
+  padding: $s-spacing $m-spacing;
+  background-image: url(./../assets/background-main.svg); //https://app.heazy.studio
+}
+
+/* Responsive design */
+@media screen and (max-width: $tablet) {
+  main {
+    padding: $xxs-spacing $xs-spacing;
+  }
+}
+
+/* tablet breakpoint */
+@media (min-width: $tablet) {
+  header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+}

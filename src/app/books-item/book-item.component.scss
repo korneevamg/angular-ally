@@ -1,0 +1,75 @@
+@import "../../styles.scss";
+
+.cdk-keyboard-focused,
+article:hover,
+article:focus {
+  border-width: 0.2rem;
+
+  header {
+    border-color: #114446;
+    border-width: 0.2rem;
+    background-color: #ffcb9a;
+    color: black;
+  }
+
+  .book__title {
+    color: black;
+  }
+}
+
+article {
+  display: block;
+  background-color: white;
+  border-color: black;
+  border-width: 0.1rem;
+  border-style: solid;
+}
+
+header {
+  background-color: #114446;
+  border-color: black;
+  border-width: 0.1rem;
+  border-bottom-style: solid;
+}
+
+.book__text {
+  padding: 0.5rem;
+}
+
+.book__header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.book__title {
+  grid-column: 1;
+  margin: 0;
+  height: 5rem;
+  padding: 0.8rem;
+  color: white;
+}
+.book__title h3 {
+  margin: 0;
+}
+
+.book__author {
+  height: 2rem;
+}
+
+.book__abstract {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.book__close {
+  justify-self: end;
+  grid-column: 2;
+  width: 40px;
+  height: 40px;
+  text-indent: 40px;
+  overflow: hidden;
+  cursor: pointer;
+  background: url(../../assets/close.svg) center no-repeat;
+  background-size: contain;
+  background-color: $primary-color-invert;
+}
