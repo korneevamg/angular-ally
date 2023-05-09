@@ -11,6 +11,7 @@ import { A11yModule } from '@angular/cdk/a11y';
 import { BookItemComponent } from './books-item/book-item.component';
 import { TitleStrategy } from '@angular/router';
 import { CustomTitleStrategy } from './a11y-title-strategy';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,13 @@ import { CustomTitleStrategy } from './a11y-title-strategy';
     AboutComponent,
     BookItemComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, A11yModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    A11yModule,
+  ],
   providers: [{ provide: TitleStrategy, useClass: CustomTitleStrategy }],
   bootstrap: [AppComponent],
 })
