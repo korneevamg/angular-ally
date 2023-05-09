@@ -18,6 +18,10 @@ export class BooksService {
 
   constructor(private http: HttpClient) {}
 
+  create(book: Book): Observable<Book> {
+    return this.http.post<Book>(`${this.endpoint}/books/`, book);
+  }
+
   getAll(): Observable<Book[]> {
     return this.http.get<Book[]>(`${this.endpoint}/books`);
   }

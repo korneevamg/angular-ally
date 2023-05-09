@@ -1,4 +1,6 @@
 <header>
+  <!--TODO 3: Skip navigation -->
+  <a class="skiplink" href="#content">Skip to main content</a>
   <nav class="crumbs">
     <ol>
       <!-- TODO 2: highlight current link with routerLinkActive and inform screen reader about it by adding ariaCurrentWhenActive  -->
@@ -26,8 +28,8 @@
     </ol>
   </nav>
   <div class="logo">
-    <img src="./../assets/a11y.png" />
+    <img alt="" src="./../assets/a11y.png" />
     <h1><span class="secondary-color">Accessible</span> Reads</h1>
   </div>
 </header>
-<main><router-outlet></router-outlet></main>
+<main id="content"><router-outlet></router-outlet></main>

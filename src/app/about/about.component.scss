@@ -22,16 +22,10 @@
   height: 100%;
 }
 
-#dailyVisitors {
-  border: $secondary-color solid 0.3rem;
-  background-color: $primary-color-invert;
-}
-
-table {
-  border: $secondary-color solid 0.3rem;
-  background-color: $primary-color-invert;
-  font-weight: bold;
-  color: $secondary-color;
+.mission_books {
+  padding: 1rem;
+  background-color: $secondary-color;
+  color: $primary-color-invert;
 }
 
 /* tablet breakpoint */

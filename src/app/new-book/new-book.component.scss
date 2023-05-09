@@ -32,8 +32,9 @@ form {
   margin-top: 1rem;
 }
 
-input[type="submit"] {
+button[type="submit"] {
   background-color: $primary-color-invert;
+  color: $primary-color;
   border: solid 3px $primary-color;
   padding: $xxs-spacing;
   width: 100%;
