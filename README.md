@@ -13,6 +13,8 @@ We will learn how to use ARIA attributes in an efficient and flexible way, how t
 
 ## A11y resources
 
+- [Barrierefreiheit 2.0 - was kommt ab 2025 und was kann ich jetzt schon tun
+](https://drive.google.com/file/d/1t6OSc0L8RwlY9d9htfVZQb_efMoDqUPh/view?usp=sharing)
 - [Accessibility in Angular](https://angular.io/guide/accessibility)
 - [Build more accessible Angular apps](https://blog.angular.io/build-more-accessible-angular-apps-1aca4fc39aff)
 - [Angular CDK A11yModule](https://material.angular.io/cdk/a11y/overview)
