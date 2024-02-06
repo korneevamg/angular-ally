@@ -2,11 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { take } from 'rxjs';
 import { Book, BooksService } from '../books.service';
 import { FocusMonitor } from '@angular/cdk/a11y';
+import { BookItemComponent } from '../books-item/book-item.component';
+import { NgFor } from '@angular/common';
 
 @Component({
-  selector: 'app-books',
-  templateUrl: './books.component.html',
-  styleUrls: ['./books.component.scss'],
+    selector: 'app-books',
+    templateUrl: './books.component.html',
+    styleUrls: ['./books.component.scss'],
+    standalone: true,
+    imports: [NgFor, BookItemComponent],
 })
 export class BooksComponent implements OnInit {
   public books!: Book[];

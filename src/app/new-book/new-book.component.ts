@@ -1,12 +1,15 @@
 import { Component, OnDestroy } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { BooksService } from '../books.service';
+import { NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-new-book',
-  templateUrl: './new-book.component.html',
-  styleUrls: ['./new-book.component.scss'],
+    selector: 'app-new-book',
+    templateUrl: './new-book.component.html',
+    styleUrls: ['./new-book.component.scss'],
+    standalone: true,
+    imports: [ReactiveFormsModule, NgIf],
 })
 export class NewBookComponent implements OnDestroy {
   newForm = this.buildForm();

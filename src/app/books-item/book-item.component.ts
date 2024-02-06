@@ -7,12 +7,14 @@ import {
   Output,
 } from '@angular/core';
 import { Book } from '../books.service';
-import { FocusOrigin } from '@angular/cdk/a11y';
+import { FocusOrigin, CdkMonitorFocus } from '@angular/cdk/a11y';
 
 @Component({
-  selector: 'app-book-item',
-  templateUrl: './book-item.component.html',
-  styleUrls: ['./book-item.component.scss'],
+    selector: 'app-book-item',
+    templateUrl: './book-item.component.html',
+    styleUrls: ['./book-item.component.scss'],
+    standalone: true,
+    imports: [CdkMonitorFocus],
 })
 export class BookItemComponent {
   @Input() public book!: Book;
