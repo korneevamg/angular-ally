@@ -1,0 +1,45 @@
+<nav>
+  <!--Accessible hamburger-->
+  <!--https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/examples/menu-button-links/#ex_label-->
+  <div id="hamburger" class="mobile-menu">
+    <button
+      type="button"
+      id="menubutton"
+      class="hamburger"
+      aria-label="Accessible Reads Quick Links"
+      aria-haspopup="true"
+      aria-controls="menuContent"
+    >
+      ☰
+    </button>
+
+    <ul
+      id="menuContent"
+      class="hamburgerContent"
+      role="menu"
+      *ngFor="let menuItem of menuItems"
+    >
+      <li
+        role="none"
+        class="menu-item"
+        routerLinkActive="active-link"
+        ariaCurrentWhenActive="page"
+      >
+        <a role="menuitem" [routerLink]="menuItem.url">{{ menuItem.title }}</a>
+      </li>
+    </ul>
+  </div>
+
+  <!--Accessible desktop navigation-->
+  <div class="desktop-navigation">
+    <ul class="desktop-navigation__links" *ngFor="let menuItem of menuItems">
+      <li
+        class="navigation-item"
+        routerLinkActive="active-link"
+        ariaCurrentWhenActive="page"
+      >
+        <a [routerLink]="menuItem.url">{{ menuItem.title }}</a>
+      </li>
+    </ul>
+  </div>
+</nav>

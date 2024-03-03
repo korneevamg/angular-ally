@@ -23,7 +23,7 @@ export class CustomTitleStrategy extends TitleStrategy {
     const title = this.buildTitle(routerState);
     this.liveAnnouncer.announce(title || '');
     console.log(title);
-    //TODO 5: Workaround: https://github.com/angular/angular/issues/46179
+    //Angular focus 5: Workaround: https://github.com/angular/angular/issues/46179
     // cdk-live-announcer-element cdk-visually-hidden
     if (title !== undefined) {
       this.title.setTitle(title);

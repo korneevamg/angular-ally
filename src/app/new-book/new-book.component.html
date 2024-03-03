@@ -1,10 +1,10 @@
 <h1>New book</h1>
 
-<!-- TODO 8: Add submit on enter -->
+<!-- Angular focus 8: ngSubmit submits on enter -->
 <form [formGroup]="newForm" (ngSubmit)="create()">
   <!-- Yes, you can do it (larger clickable area, but just one control allowed): https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label -->
   <label class="form-field" id="isbn-label">
-    <!-- TODO 9: Add validation rules and improve wording -->
+    <!-- Angular focus 9: validation -->
     <!-- DISCUSSION: Star or required?-->
     <span>ISBN (required)</span>
 
@@ -33,7 +33,7 @@
     <input id="title" formControlName="title" />
   </label>
 
-  <!-- TODO 10: Inform about the error 
+  <!-- Angular focus 10: *ngIf + dirty
   Resource: https://coryrylan.com/blog/build-accessible-forms-with-angular
 DISCUSSION: Single or all at once?-->
   <small

@@ -32,6 +32,11 @@ header {
   border-bottom-style: solid;
 }
 
+// Style h2 to look like h3
+h2 {
+  font-size: $xs-font;
+}
+
 .book__text {
   padding: 0.5rem;
 }
@@ -48,7 +53,7 @@ header {
   padding: 0.8rem;
   color: white;
 }
-.book__title h3 {
+.book__title h2 {
   margin: 0;
 }
 
@@ -59,6 +64,13 @@ header {
 .book__abstract {
   text-overflow: ellipsis;
   overflow: hidden;
+}
+
+.book__details {
+  color: $secondary-color;
+  font-weight: bold;
+  display: block;
+  margin: $xs-spacing 0;
 }
 
 .book__close {

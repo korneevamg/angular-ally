@@ -1,36 +1,61 @@
 @import "../styles.scss";
 
+:host {
+  display: flex;
+  flex-direction: column;
+  flex: 1 auto;
+}
+
 /* Style the header */
 header {
+  width: 100%;
+  background-color: $primary-color-invert;
   padding: $xs-spacing;
   vertical-align: middle;
 
-  background-image: url(./../assets/background-header.svg); //https://app.heazy.studio
+  background-image: url(../assets/background-header.svg); //https://app.heazy.studio
+}
 
-  nav {
-    grid-column: 1;
-    align-self: center;
+.visible-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
 
-    .crumbs ol {
-      list-style-type: none;
-    }
+.logo {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-column: 2;
+  align-content: center;
 
-    .crumb {
-      display: inline-block;
-      padding: $xxs-spacing $xs-spacing;
-    }
+  .logo__text {
+    font-size: min($m-font, 6vw);
+    font-weight: bold;
+  }
+}
 
-    .crumb a {
-      font-size: $xs-font;
-      font-weight: bold;
-      color: $primary-color;
-      text-decoration: none;
-    }
+header .logo img {
+  grid-column: 1;
+  max-width: $m-spacing;
+  min-width: $s-spacing;
+  align-self: center;
+  justify-self: end;
+  text-align: right;
+  padding-right: $xs-spacing;
+}
+
+//   https://angular.io/api/router/RouterLinkActive
+.active-link {
+  text-decoration: underline;
+}
+
+/* tablet breakpoint */
+@media screen and (max-width: $tablet) {
+  main {
+    padding: 10rem $xs-spacing;
   }
 
-  //   https://angular.io/api/router/RouterLinkActive
-  .active-link {
-    text-decoration: underline;
+  footer .footer__links {
+    margin-bottom: $xs-spacing;
   }
 }
 
@@ -64,12 +89,6 @@ header .logo img {
   text-align: right;
   padding-right: $xs-spacing;
 }
-header .logo h1 {
-  grid-column: 2;
-  align-self: center;
-  justify-self: end;
-  text-align: right;
-}
 
 .secondary-color {
   color: $secondary-color;
@@ -85,13 +104,5 @@ main {
 @media screen and (max-width: $tablet) {
   main {
     padding: $xxs-spacing $xs-spacing;
-  }
-}
-
-/* tablet breakpoint */
-@media (min-width: $tablet) {
-  header {
-    display: grid;
-    grid-template-columns: auto 1fr;
   }
 }

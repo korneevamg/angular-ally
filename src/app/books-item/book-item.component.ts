@@ -1,3 +1,4 @@
+import { CdkMonitorFocus, FocusOrigin } from '@angular/cdk/a11y';
 import {
   ChangeDetectorRef,
   Component,
@@ -6,15 +7,15 @@ import {
   NgZone,
   Output,
 } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { Book } from '../books.service';
-import { FocusOrigin, CdkMonitorFocus } from '@angular/cdk/a11y';
 
 @Component({
-    selector: 'app-book-item',
-    templateUrl: './book-item.component.html',
-    styleUrls: ['./book-item.component.scss'],
-    standalone: true,
-    imports: [CdkMonitorFocus],
+  selector: 'app-book-item',
+  templateUrl: './book-item.component.html',
+  styleUrls: ['./book-item.component.scss'],
+  standalone: true,
+  imports: [CdkMonitorFocus, RouterLink],
 })
 export class BookItemComponent {
   @Input() public book!: Book;

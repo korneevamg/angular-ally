@@ -49,19 +49,22 @@ body {
   height: 100%;
 }
 
-.skiplink {
+.visually-hidden {
   position: absolute;
   left: -100000px;
   top: auto;
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
 
-  &:focus {
-    position: static;
-    width: auto;
-    height: auto;
-  }
+.cdk-visually-hidden {
+  position: absolute;
+  left: -100000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 body {
@@ -83,6 +86,7 @@ footer {
   background-color: $secondary-color;
   font-size: 0.8rem;
   grid-row: 3;
+  margin-top: auto;
 
   a {
     color: $primary-color-invert;
@@ -141,5 +145,11 @@ footer {
 
   footer .footer__links {
     justify-content: left;
+  }
+}
+
+@media (forced-colors: active) {
+  footer .footer--icon {
+    fill: $primary-color;
   }
 }
