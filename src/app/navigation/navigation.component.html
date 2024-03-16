@@ -7,25 +7,20 @@
       id="menubutton"
       class="hamburger"
       aria-label="Accessible Reads Quick Links"
-      aria-haspopup="true"
       aria-controls="menuContent"
+      (click)="onButtonClick()"
+      [attr.aria-expanded]="isMenuOpen"
     >
       ☰
     </button>
-
-    <ul
-      id="menuContent"
-      class="hamburgerContent"
-      role="menu"
-      *ngFor="let menuItem of menuItems"
-    >
+    <ul id="menuContent" class="hamburgerContent" *ngIf="isMenuOpen">
       <li
-        role="none"
         class="menu-item"
         routerLinkActive="active-link"
         ariaCurrentWhenActive="page"
+        *ngFor="let menuItem of menuItems"
       >
-        <a role="menuitem" [routerLink]="menuItem.url">{{ menuItem.title }}</a>
+        <a [routerLink]="menuItem.url">{{ menuItem.title }}</a>
       </li>
     </ul>
   </div>
